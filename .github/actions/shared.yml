@@ -1,0 +1,7 @@
+name: Shared action
+description: An action to be used in other repos by checkout
+runs:
+    - run: echo Greeting from the other repo
+      shell: bash
+    - run: pwd
+      shell: bash

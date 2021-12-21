@@ -1,0 +1,16 @@
+name: Reusable workflow
+
+on:
+  workflow_call:
+    inputs:
+      reponame:
+        required: true
+        type: string
+
+jobs:
+  example_job:
+    name: Pass input to shared action
+    runs-on: ubuntu-latest
+    steps:
+      - uses: ./.github/actions/shared@v1  
+      - run: echo this workflow is run by ${{ inputs.reponame }}

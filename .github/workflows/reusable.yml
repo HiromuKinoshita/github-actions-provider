@@ -17,9 +17,13 @@ jobs:
       - name: ls before checkout
         run: ls -a
       - uses: actions/checkout@v2
+        with: 
+          epository: HiromuKinoshita/github-actions-provider
+          ref: main
+          path: .github/actions/other-repository
       - name: pwd after checkout
         run: pwd
       - name: ls after checkout
         run: ls -a -R
-      - uses: ./.github/actions/shared
+      - uses: ./.github/actions/other-repository/.github/actions/shared
       - run: echo this workflow is run by ${{ inputs.reponame }}

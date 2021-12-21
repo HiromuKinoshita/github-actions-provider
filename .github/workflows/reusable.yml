@@ -12,5 +12,7 @@ jobs:
     name: Pass input to shared action
     runs-on: ubuntu-latest
     steps:
+      - run: pwd
+      - run: ls
       - uses: ./.github/actions/shared@main
       - run: echo this workflow is run by ${{ inputs.reponame }}

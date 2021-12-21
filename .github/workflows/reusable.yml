@@ -12,7 +12,14 @@ jobs:
     name: Run shared action and show passed value
     runs-on: ubuntu-latest
     steps:
-      - run: pwd
-      - run: ls -a
+      - name: pwd before checkout
+        run: pwd
+      - name: ls before checkout
+        run: ls -a
+      - uses: actions/checkout@v2
+      - name: pwd after checkout
+        run: pwd
+      - name: ls after checkout
+        run: ls -a
       - uses: ./.github/actions/shared@main
       - run: echo this workflow is run by ${{ inputs.reponame }}

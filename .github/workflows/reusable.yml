@@ -20,6 +20,6 @@ jobs:
       - name: pwd after checkout
         run: pwd
       - name: ls after checkout
-        run: ls -a
+        run: ls -a -R
       - uses: ./.github/actions/shared
       - run: echo this workflow is run by ${{ inputs.reponame }}

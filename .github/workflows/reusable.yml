@@ -9,10 +9,10 @@ on:
 
 jobs:
   example_job:
-    name: Pass input to shared action
+    name: Run shared action and show passed value
     runs-on: ubuntu-latest
     steps:
       - run: pwd
-      - run: ls
+      - run: ls -a
       - uses: ./.github/actions/shared@main
       - run: echo this workflow is run by ${{ inputs.reponame }}

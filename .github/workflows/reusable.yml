@@ -18,7 +18,7 @@ jobs:
         run: ls -a
       - uses: actions/checkout@v2
         with: 
-          repository: HiromuKinoshita/github-actions-provider
+          repository: Jerome-1010/github-actions-provider
           ref: main
           path: .github/actions/other-repository
       - name: pwd after checkout
